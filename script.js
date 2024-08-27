@@ -18,3 +18,4 @@ function Navigate(indx) {
     Array.from(document.querySelectorAll(".Links li"))[indx].classList.add("activeLink")
     swiper.slideTo(indx, 1000, true)
 }
+

@@ -22,16 +22,13 @@
                     <p>About Me</p>
                 </li>
                 <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
-                    <p>Services</p>
+                    <p>Gallery</p>
                 </li>
                 <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
-                    <p>Gallery</p>
+                    <p>Cooperation</p>
                 </li>
                 <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
                     <p>Contact Me</p>
-                </li>
-                <li><a href="./insta.html">insta video</a>
-                    
                 </li>
             </ul>
         </aside>
@@ -42,7 +39,8 @@
                         <h1>Hi! I'm <span class="stylized-name">Tetiana</span>,</h1>
                         <h2>A <span class="proffesions">UGC Creator</span></h2>
                         <p class="heroline"></p>
-                        <div class="buttonGroup"><button>Hire Me</button><button>Contact Me</button></div>
+                        <div class="buttonGroup"><button onclick="Navigate(3)">Cooperation</button>
+                            <button onclick="Navigate(4)">Contact Me</button></div>
                     </div>
                     <div class="SideImg">
                         <div class="top-right-corner">
@@ -112,9 +110,32 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iure, iste debi
                         </div>
                     </div>
                 </div></div>
-                <div class="swiper-slide services">
 
-                    <h1 class="heading">Services</h1>
+                <div class="swiper-slide gallery">
+                    <h1 class="heading">Gallery</h1>
+               <div class="galleryInside">                         
+                       <video controls autoplay poster="">
+                           <source src="./video.mp4" type="video/mp4">
+                           Your browser does not support the video tag.
+                       </video>
+                       <video controls autoplay poster="">
+                           <source src="./video1.mp4" type="video/mp4">
+                           Your browser does not support the video tag.
+                       </video>
+                       <video controls autoplay poster="">
+                           <source src="./video2.mp4" type="video/mp4">
+                           Your browser does not support the video tag.
+                       </video>
+                       <video controls autoplay poster="">
+                           <source src="./video3.mp4" type="video/mp4">
+                           Your browser does not support the video tag.
+                       </video>                         
+               </div>
+           </div>
+
+
+                <div class="swiper-slide services">
+                    <h1 class="heading">Cooperation</h1>
                     <div class="service">
                         <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
                         <h2>Web Design</h2>
@@ -146,54 +167,41 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iure, iste debi
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod.</p>
                     </div>
                 </div>
-                <div class="swiper-slide gallery">
-                    <h1 class="heading">Gallery</h1>
-                    <video controls autoplay height="640" width="480" >
-                        <source src="./video1.mp4" type="video/mp4">
-                      </video>
-                      
+                  
+                    
 
 
 
-                </div>
+             
                 <div class="swiper-slide contactMe">
                     <h1 class="heading">Contact Me</h1>
-                    <div class="contactinfo"><i class="fa-solid fa-phone"></i>
-                        <h3>Mobile No</h3>
-                        <p>123-456-7890</p>
+                    <div class="contactMeInside">
+                        <ul class="wrapper">
+                            <li class="icon facebook">
+                              <span class="tooltip">Facebook</span>
+                              <span><a href="https://www.facebook.com/profile.php?id=100015197567457"><i class="fab fa-facebook-f"></i></a></span>
+                            </li>
+                            <li class="icon telegram">
+                              <span class="tooltip">Telegram</span>
+                              <span><a href="https://t.me/kamienievat"><i class="fab fa-telegram"></i></a></span>
+                            </li>
+                            <li class="icon instagram">
+                              <span class="tooltip">Instagram</span>
+                              <span><a href="https://www.instagram.com/tetiana.kamienieva/"><i class="fab fa-instagram"></i></a></span>
+                            </li>
+                            <li class="icon gmail">
+                              <span class="tooltip">Gmail</span>
+                              <span><a href="mailto:kamenevat97@gmail.com" class="email-button"><i class="fab fa-google"></i></a></span>
+                            </li>                
+                        </ul>
                     </div>
-                    <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
-                        <h3>Location</h3>
-                        <p>Somewhere On Earth</p>
-                    </div>
-                    <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p>abc123@gmail.com</p>
-                    </div>
-                    <div class="contactinfo"><i class="fa-solid fa-globe"></i>
-                        <h3>Website</h3>
-                        <p>www.abc123.com</p>
-                    </div>
-                    <form>
-                        <h2>Send Me A Message <div class="SocialLinks">
-                                <i class="fa-brands fa-codepen"></i>
-                                <i class="fa-brands fa-instagram"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-facebook"></i>
-                            </div>
-                        </h2>
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="email">
-                        <textarea rows="10" placeholder="Type your Message Here..."></textarea>
-                        <button class="primary">Send</button>
-
-                    </form>
-                    <footer>
-                        <li>Copyright © 2023 Muzammal.</li>
-                    </footer>
+                    
+        <footer>
+            <li>Copyright © 2024 Tetiana Kamienieva</li>
+        </footer>
                 </div>
             </div>
+        </div>
     </main>
 
 </body>
