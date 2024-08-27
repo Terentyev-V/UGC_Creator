@@ -517,3 +517,79 @@ form h2 .SocialLinks i:hover{
 .about-us{
     overflow: auto;
 }
+
+@media only screen and (max-width: 428px) and (orientation: portrait) {
+    aside {
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        font-size: 1.1rem;
+        background-color: #736A5A;
+        backdrop-filter: blur(20px);
+    }
+
+    aside li {
+        list-style-type: none;
+        display: flex;
+        padding: 10px;
+        gap: 10px;
+        color: white;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        transition-duration: 0.2s;
+    }
+    
+    .Links p {
+        display: none;
+    }
+
+    .swiper-slide {
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .SideImg {
+        width: 100%;
+        grid-area: 1 / 2 / 2 / 3; 
+    
+        margin: 5px 5px;
+        margin-right: 100px;
+        position: relative;
+    }
+    
+    .SideImg img {
+        top: 200px;
+        width: 100%;
+        border-radius: 5px;
+        
+    }
+
+    .HomeContent {
+        grid-area: 2 / 2 / 3 / 3; 
+        margin: auto 10px;
+       
+        height: auto;
+    
+        padding: 10px;
+        user-select: none;
+    }
+    .bottom-left-corner {
+        left: -30px;
+        bottom: -5px;
+        rotate: -90deg;
+    }
+    
+    .top-right-corner {
+        right: -30px;
+        top: 10px;
+        rotate: 90deg;
+    }
+
+}
