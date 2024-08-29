@@ -22,7 +22,7 @@ main {
 }
 
 aside {
-    width: 280px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -212,7 +212,7 @@ aside li i {
 
 .swiper-slide {
     width: 100%;
-    background-color: #E3DCCF;
+    background-color: #ddd7ca;
     height: 100%;
 }
 
@@ -358,11 +358,11 @@ aside li i {
 
 .gallery {
     display: grid;
-    grid-template-columns: 0.2fr auto 0.2fr;
+    grid-template-columns: 0.1fr 1fr 0.2fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
 }
 
@@ -548,8 +548,8 @@ form h2 .SocialLinks i:hover{
     overflow: auto;
 }
 .galleryInside video {
-    width: 240px;
-    height: 320px;
+    width: 206px;
+    height: 408x;
     
 }
 .galleryInside {
@@ -557,6 +557,9 @@ form h2 .SocialLinks i:hover{
   justify-content: center;
   align-content: center;
 }
+
+
+
 
 
 
