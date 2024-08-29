@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-    <script defer src="script.js"></script>
-    <title>Document</title>
+    <title>UGC Creator Tetiana</title>
 </head>
 <body>
     
@@ -66,24 +66,31 @@
 
                 <div class="swiper-slide gallery">
                     <h1 class="heading">Gallery</h1>
-               <div class="galleryInside">                      
-                       <video id="Video1"   autoplay poster="">
-                           <source src="./video.mp4" type="video/mp4">
-                           Your browser does not support the video tag.
-                       </video>
-                    
-                       <video id="Video2" autoplay poster="">
-                           <source src="./video1.mp4" type="video/mp4">
-                           Your browser does not support the video tag.
-                       </video>
-                       <video id="Video"  autoplay poster="">
-                           <source src="./video2.mp4" type="video/mp4">
-                           Your browser does not support the video tag.
-                       </video>
-                       <video id="Video"  autoplay poster="">
-                           <source src="./video3.mp4" type="video/mp4">
-                           Your browser does not support the video tag.
-                       </video>                       
+                <div class="galleryInside">
+                    <div id="video-container" class="video-container">    
+
+                        <video id="Video1"   autoplay poster="">
+                            <source src="./video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                     
+                        <video id="Video2" autoplay poster="">
+                            <source src="./video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+ 
+                        <video id="Video3"  autoplay poster="">
+                            <source src="./video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+ 
+                        <video id="Video4"  autoplay poster="">
+                            <source src="./video3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>  
+                                             
+
+                    </div>                      
                </div>
            </div>
 
@@ -128,6 +135,6 @@
             </div>
         </div>
     </main>
-
+    <script defer src="script.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ var swiper = new Swiper(".swiper", {
         shadowOffset: 20,
         shadowScale: 0.94,
     },
-    mousewheel:true
+    mousewheel:false,
 });
 swiper.sliderMove = function (s, e) {
     console.log(s)
@@ -25,3 +25,8 @@ videos.forEach((video) => {
 });
 
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadVideos(); // Initial videos
+    window.addEventListener('scroll', handleScroll); // Set up scroll detection
+});
