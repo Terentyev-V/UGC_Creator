@@ -665,9 +665,10 @@ video {
         height: auto;
         padding: 20px;
         background-color: #ddd7ca;
+        
     }
     .galleryInside {
-        overflow: visible;
+        overflow: auto;
         height: auto;
         display: flex;
         flex-wrap: wrap;
