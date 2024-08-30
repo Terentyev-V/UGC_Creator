@@ -1,6 +1,6 @@
 var swiper = new Swiper(".swiper", {
     effect: "cube",
-    allowTouchMove:false,
+    allowTouchMove: false,
     grabCursor: false,
     cubeEffect: {
         shadow: true,
@@ -8,8 +8,16 @@ var swiper = new Swiper(".swiper", {
         shadowOffset: 20,
         shadowScale: 0.94,
     },
-    mousewheel:false,
+    mousewheel: false,
+    simulateTouch: true,  // Ensure touch simulation is enabled for mobile
+    breakpoints: {
+        428: {
+            allowTouchMove: true, // Enable touch move for smaller screens
+        }
+    }
 });
+
+
 swiper.sliderMove = function (s, e) {
     console.log(s)
 }

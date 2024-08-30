@@ -15,6 +15,7 @@
 
 body {
     height: auto; 
+    overflow: visible;
 }
 
 main {
@@ -22,7 +23,7 @@ main {
     height: auto;
     width: 100%;
     font-family: Poppins;
-    overflow: auto;
+    overflow: visible;
 }
 
 aside {
@@ -74,9 +75,15 @@ aside li i {
     color:#2B271F
 }
 .mySwiper {
-    overflow: auto; 
+    overflow: hidden; 
     flex: 1;
-    height: auto;
+    
+    width: 100%; /* Make swiper width responsive */
+    max-width: 100%; /* Ensure it doesn't exceed viewport width */
+    background-color: #ddd7ca;
+    width: 80vw;
+    height: 100vh;
+
 }
 
 .home-slide {
@@ -205,14 +212,6 @@ aside li i {
     color: #736A5A;
 }
 
-
-
-.mySwiper {
-    width: 80vw;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #E3DCCF;
-}
 
 .swiper-slide {
     width: 100%;
@@ -362,9 +361,9 @@ aside li i {
 }
 
 .gallery {
-    overflow: visible;
-    height: auto;
-    padding: 20px; /* Optional: Add padding to space out content */
+    overflow: auto;
+    height: auto; /* Allow height to grow based on content */
+    padding: 20px; /* Space out the content */
     display: flex;
     flex-wrap: wrap;
     gap: 10px; /* Space between video elements */
@@ -553,15 +552,11 @@ form h2 .SocialLinks i:hover{
 .about-us{
     overflow: auto;
 }
-.galleryInside video {
-    width: 206px;
-    height: 408x;
-    
-}
+
 .galleryInside {
-    overflow: visible;
-    height: auto;
-    padding: 20px; /* Optional: Add padding to space out content */
+    overflow: auto;
+    height: auto; /* Allow height to grow based on content */
+    padding: 20px; /* Space out the content */
     display: flex;
     flex-wrap: wrap;
     gap: 10px; /* Space between video elements */
@@ -569,9 +564,9 @@ form h2 .SocialLinks i:hover{
 }
 
 .video-container {
-    overflow: visible;
-    height: auto;
-    padding: 20px; /* Optional: Add padding to space out content */
+    overflow: auto;
+    height: auto; /* Allow height to grow based on content */
+    padding: 20px; /* Space out the content */
     display: flex;
     flex-wrap: wrap;
     gap: 10px; /* Space between video elements */
@@ -663,26 +658,43 @@ video {
     }
 
     .gallery {
-        display: grid;
-        grid-template-columns: 0.2fr 1fr 0.2fr;
-        grid-template-rows: 0.2fr 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        justify-content: center;
-        align-content: center;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align heading and content */
+        overflow: auto;
+        height: auto;
+        padding: 20px;
+        
     }
     .galleryInside {
-        grid-area: 2 / 2 / 3 / 3; 
-        flex-wrap: wrap;
-    }
-    .gallery h1 {
-        grid-area: 1 / 2 / 2 / 3; 
-        justify-self: center;
-    }
-    .galleryInside video {
-        
+        overflow: visible;
         height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;  /* Ensure full width for centering content */
+    }
+    .gallery h1.heading {
+        display: none;
+    }
+
+    .galleryInside video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .swiper-slide {
+        display: flex; /* Ensure correct display type */
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align content */
+        justify-content: center; /* Center align content */
     }
 
 }
+
 
