@@ -361,7 +361,7 @@ aside li i {
 }
 
 .gallery {
-    overflow: auto;
+    overflow: visible;
     height: auto; /* Allow height to grow based on content */
     padding: 20px; /* Space out the content */
     display: flex;
@@ -554,7 +554,7 @@ form h2 .SocialLinks i:hover{
 }
 
 .galleryInside {
-    overflow: auto;
+    overflow: visible;
     height: auto; /* Allow height to grow based on content */
     padding: 20px; /* Space out the content */
     display: flex;
@@ -564,7 +564,7 @@ form h2 .SocialLinks i:hover{
 }
 
 .video-container {
-    overflow: auto;
+    overflow: visible;
     height: auto; /* Allow height to grow based on content */
     padding: 20px; /* Space out the content */
     display: flex;
@@ -664,7 +664,7 @@ video {
         overflow: auto;
         height: auto;
         padding: 20px;
-        
+        background-color: #ddd7ca;
     }
     .galleryInside {
         overflow: visible;
