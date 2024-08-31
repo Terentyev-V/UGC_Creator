@@ -524,7 +524,11 @@ aside li i {
 
   .icon a {
     color: black;
-    pointer-events: auto;
+    color: black;
+    pointer-events: auto; /* Allow clicking */
+    z-index: 2; /* Ensure buttons are above other elements */
+    display: inline-block; /* Ensures the entire anchor area is clickable */
+    text-decoration: none; 
   }
 
 
