@@ -428,7 +428,9 @@ aside li i {
     justify-self: center;
     align-content: end ;
 }
-
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 
 .wrapper {
     display: inline-flex;
