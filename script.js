@@ -47,7 +47,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.querySelector('.gallery');
     gallery.addEventListener('scroll', handleScroll); // Attach scroll listener to gallery
 });
-
-function navigateTo(url) {
-    window.location.href = url;
-}
