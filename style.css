@@ -75,14 +75,12 @@ aside li i {
     color:#2B271F
 }
 .mySwiper {
-    overflow: hidden; 
+    overflow: visible; 
     flex: 1;
-    
+    height: auto;
     width: 100%; /* Make swiper width responsive */
     max-width: 100%; /* Ensure it doesn't exceed viewport width */
-    background-color: #ddd7ca;
-    width: 80vw;
-    height: 100vh;
+    background-color: #E3DCCF;
 
 }
 
@@ -212,6 +210,14 @@ aside li i {
     color: #736A5A;
 }
 
+
+
+.mySwiper {
+    width: 80vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #E3DCCF;
+}
 
 .swiper-slide {
     width: 100%;
@@ -361,13 +367,13 @@ aside li i {
 }
 
 .gallery {
-    overflow: visible;
-    height: auto; /* Allow height to grow based on content */
-    padding: 20px; /* Space out the content */
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #ddd7ca;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Space between video elements */
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
    
 }
 
@@ -554,16 +560,15 @@ form h2 .SocialLinks i:hover{
 }
 
 .galleryInside {
-    overflow: visible;
-    height: auto; /* Allow height to grow based on content */
-    padding: 20px; /* Space out the content */
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Space between video elements */
-    justify-content: center;
+    grid-template-columns: 0.1fr 1fr 0.1fr; 
+    gap: 10px;
+    width: 100%;
+    justify-items: center;
 }
 
 .video-container {
+    grid-area: 1 / 2 / 2 / 3;
     overflow: visible;
     height: auto; /* Allow height to grow based on content */
     padding: 20px; /* Space out the content */
@@ -573,12 +578,12 @@ form h2 .SocialLinks i:hover{
     justify-content: center;
 }
 
-video {
-    width: 206px;
+.video-container video {
+    width: 208px;
     height: 408px;
-    object-fit: cover; /* Keeps video aspect ratio */
+    object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 10px; /* Adds space below each video */
+    margin-bottom: 10px;
 }
 
 
@@ -661,14 +666,13 @@ video {
         display: flex;
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center align heading and content */
-        overflow: hidden;
+        overflow: auto;
         height: auto;
         padding: 20px;
-        background-color: #ddd7ca;
-        
     }
     .galleryInside {
-        overflow: auto;
+        margin-top: 200px;
+        overflow: visible;
         height: auto;
         display: flex;
         flex-wrap: wrap;
@@ -678,7 +682,7 @@ video {
         width: 100%;  /* Ensure full width for centering content */
     }
     .gallery h1.heading {
-        display: none;
+        display:none;
     }
 
     .galleryInside video {

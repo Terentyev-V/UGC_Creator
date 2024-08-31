@@ -17,24 +17,33 @@ var swiper = new Swiper(".swiper", {
     }
 });
 
-
 swiper.sliderMove = function (s, e) {
-    console.log(s)
-}
+    console.log(s);
+};
+
 function Navigate(indx) {
-    for (let i of document.querySelectorAll(".Links li")) i.classList.remove("activeLink")
-    Array.from(document.querySelectorAll(".Links li"))[indx].classList.add("activeLink")
-    swiper.slideTo(indx, 1000, true)
+    document.querySelectorAll(".Links li").forEach((li) => li.classList.remove("activeLink"));
+    document.querySelectorAll(".Links li")[indx].classList.add("activeLink");
+    swiper.slideTo(indx, 1000, true);
 }
-//----video playback
+
+// Video Playback: Pause/Play on Click
 let videos = document.querySelectorAll("video");
 videos.forEach((video) => {
   video.onclick = () => video.paused ? video.play() : video.pause();
 });
 
+// Function to detect scroll position and load more videos
+function handleScroll() {
+    const gallery = document.querySelector('.gallery'); // Target the gallery element
+    if (gallery.scrollTop + gallery.clientHeight >= gallery.scrollHeight - 50) {
+        loadVideos();  // Load more videos when the user scrolls near the bottom
+    }
+}
 
-
+// Initial Load
 document.addEventListener('DOMContentLoaded', () => {
-    loadVideos(); // Initial videos
-    window.addEventListener('scroll', handleScroll); // Set up scroll detection
+    loadVideos(); // Load initial set of videos
+    const gallery = document.querySelector('.gallery');
+    gallery.addEventListener('scroll', handleScroll); // Attach scroll listener to gallery
 });
