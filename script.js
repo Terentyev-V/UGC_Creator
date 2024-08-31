@@ -48,20 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gallery.addEventListener('scroll', handleScroll); // Attach scroll listener to gallery
 });
 
-
-
-
-document.getElementById('facebook').addEventListener('click', function() {
-    navigateTo('https://www.facebook.com/profile.php?id=100015197567457');
-});
-
-document.getElementById('telegram').addEventListener('click', function() {
-    navigateTo('https://www.instagram.com/tetiana.kamienieva/');
-});
-document.getElementById('instagram').addEventListener('click', function() {
-    navigateTo('https://www.instagram.com/tetiana.kamienieva/');
-});
-
-document.getElementById('gmail').addEventListener('click', function() {
-    navigateTo('mailto:kamenevat97@gmail.com');
-});
+function navigateTo(url) {
+    window.location.href = url;
+}
