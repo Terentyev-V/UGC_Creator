@@ -428,9 +428,7 @@ aside li i {
     justify-self: center;
     align-content: end ;
 }
-a {
-    -webkit-tap-highlight-color: transparent;
-}
+
 
 .wrapper {
     display: inline-flex;
@@ -526,11 +524,7 @@ a {
 
   .icon a {
     color: black;
-    color: black;
-    pointer-events: auto; /* Allow clicking */
-    z-index: 2; /* Ensure buttons are above other elements */
-    display: inline-block; /* Ensures the entire anchor area is clickable */
-    text-decoration: none; 
+    pointer-events: auto;
   }
 
 
