@@ -1,4 +1,4 @@
-// Function to check if the device is touch-enabled
+// Function to detect if the device is touch-enabled
 function isTouchDevice() {
     return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 }
@@ -35,18 +35,19 @@ function Navigate(indx) {
     swiper.slideTo(indx, 1000, true);
 }
 
-// Video Playback: Pause/Play on Click or Touch
+// Video Playback: Pause/Play on Touch or Click
 document.querySelectorAll("video").forEach((video) => {
     const handleVideoPlayback = () => video.paused ? video.play() : video.pause();
 
-    if (isTouchDevice()) {
-        video.addEventListener('touchstart', handleVideoPlayback); // Attach touch event on touch-enabled devices
-    } else {
-        video.addEventListener('click', handleVideoPlayback); // Attach click event on non-touch devices
-    }
+    video.addEventListener('click', handleVideoPlayback); // Attach click event for all devices
+    video.addEventListener('touchstart', handleVideoPlayback); // Attach touch event for touch devices
 });
 
-
+// Load more videos function (placeholder for dynamic loading)
+function loadVideos() {
+    console.log('Loading more videos...');
+    // Logic to load more videos (e.g., fetch from server and append to the gallery)
+}
 
 // Handle scroll event to trigger video loading
 function handleScroll() {
@@ -62,18 +63,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.querySelector('.gallery');
     gallery.addEventListener('scroll', handleScroll); // Attach scroll listener to gallery
 
-    // Dynamically attach event listeners for "Contact Me" section based on screen size and device
-    const contactElements = document.querySelectorAll('.wrapper'); // Replace with correct selector for "Contact Me" section
+    // Attach event listeners for "Contact Me" section
+    const contactElements = document.querySelectorAll('.contactMe'); // Replace with correct selector for "Contact Me" section
     contactElements.forEach((element) => {
-        if (isTouchDevice() && window.innerWidth <= 834) {
-            element.addEventListener('touchstart', () => {
-                // Handle touch event logic for smaller screens
+        if (isTouchDevice() && window.matchMedia("(max-width: 834px)").matches) {
+            // Use touchstart event for touch-enabled devices on smaller screens
+            element.addEventListener('touchstart', (event) => {
+                event.preventDefault(); // Prevent default touch behavior
                 console.log('Touched on element:', element);
-            });
+                // Add your custom logic here
+            }, { passive: true });
         } else {
+            // Use click event for non-touch devices or larger screens
             element.addEventListener('click', () => {
-                // Handle click event logic for larger screens
                 console.log('Clicked on element:', element);
+                // Add your custom logic here
             });
         }
     });
