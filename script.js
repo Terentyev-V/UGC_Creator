@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gallery.addEventListener('scroll', handleScroll); // Attach scroll listener to gallery
 
     // Dynamically attach event listeners for "Contact Me" section based on screen size and device
-    const contactElements = document.querySelectorAll("#contact-me *"); // Replace with correct selector for "Contact Me" section
+    const contactElements = document.querySelectorAll(".contactMe"); // Replace with correct selector for "Contact Me" section
     contactElements.forEach((element) => {
         if (isTouchDevice() && window.innerWidth <= 834) {
             element.addEventListener('touchstart', () => {
