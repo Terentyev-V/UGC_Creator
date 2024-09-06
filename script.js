@@ -1,8 +1,3 @@
-// Function to detect if the device is touch-enabled
-function isTouchDevice() {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-}
-
 // Initialize Swiper
 var swiper = new Swiper(".swiper", {
     effect: "cube",
@@ -42,11 +37,6 @@ document.querySelectorAll("video").forEach((video) => {
     
 });
 
-// Load more videos function (placeholder for dynamic loading)
-function loadVideos() {
-    console.log('Loading more videos...');
-    // Logic to load more videos (e.g., fetch from server and append to the gallery)
-}
 
 
 
