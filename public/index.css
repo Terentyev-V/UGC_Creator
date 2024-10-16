@@ -1,0 +1,261 @@
+:root {
+    --primary-color: #67b1c6;
+  }
+  
+  html,
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #d9d9d9;
+    color: #17111D;
+  }
+
+  .headerParent {
+    display: flex;
+    background: transparent;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid #d9d9d9;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 1; 
+    
+  }
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.1vw 4vw 1.1vw 4vw;
+    
+  }
+
+ 
+
+  .headerNav {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    color: #17111D; 
+    text-decoration: none;   
+  }
+
+  .headerNav a {
+    color: #17111D;
+    text-decoration: none;
+  }
+
+  .headerNav a:active {
+    color: #67b1c6;
+    text-decoration: none;
+  }
+
+  .section1 {
+    display: flex;
+    width: 70dvw;
+    margin: auto;
+    column-gap: 1dvw;
+    justify-items: center;
+    align-items: center;
+    --row-height-scaling-factor: 0.0215;
+    height: 90vh; 
+    overflow: hidden;
+    padding-top: 80px;
+
+  }
+
+
+  .section1Left {
+    width: 70dvw;
+    margin: auto;
+    white-space: pre-wrap;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+    transition-delay: 0.333333s;
+    animation-duration: 0.5s;
+  }
+  
+  .section1Button {
+    line-height: normal;
+    border-style: solid;
+    height: 70px;
+    width: 200px;
+    max-width: -webkit-fill-available;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #17111D;
+    color: #F8F8FF;
+    transition: 0.5s;
+    font-size: 18px;
+  }
+
+.section1Button a {
+    text-decoration: none;
+    color: #F8F8FF;
+}
+
+.section1Button:hover {
+    background-color: #67b1c6;
+    border-color: #67b1c6;
+    color:#17111D;
+    transform: scale3d(2);
+}
+
+
+  .section1Right {
+    width: 40dvw;
+    margin: auto;
+  }
+
+  .photoMain {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    
+  }
+
+
+  .section2Out {
+    background-color: #F8F8FF;
+    padding-top: 80px;
+  }
+
+  .section2 {
+    display: flex;
+    width: 70dvw;
+    margin: auto;
+    column-gap: 1dvw;
+    justify-items: center;
+    align-items: center;
+    height: 100vh; 
+    overflow: hidden; 
+  }
+
+  .section2Left {
+    width: 70dvw;
+    margin: auto;
+    white-space: pre-wrap;
+    transition-timing-function: ease;
+    transition-duration: 0.65s;
+    transition-delay: 0.333333s;
+    animation-duration: 0.65s;
+  }
+
+  .section2Right {
+    width: 40dvw;
+    margin: auto;
+  }
+
+  .photoAbout {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+  }
+
+
+
+  .section3 {
+    display: flex;
+    width: 70dvw;
+    margin: auto;
+    column-gap: 1dvw;
+    justify-items: center;
+    align-items: center;
+    height: 100vh; 
+    overflow: hidden; 
+    white-space: pre-wrap;
+    transition-timing-function: ease;
+    transition-duration: 0.65s;
+    transition-delay: 0.444444s;
+    animation-duration: 0.65s;
+    padding-top: 80px;
+  }
+
+
+  .media {
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 20px;
+    
+    
+  }
+  
+  .carousel {
+    position: relative;
+    width: 270px;
+    
+  }
+  
+  
+  .caption-container {
+    position: absolute;
+    bottom: 0;
+    left: 20rem;
+    right: 20rem;
+    
+  }
+  
+  
+  .btn-prev,
+  .btn-next {
+    position: absolute;
+    font-size: 50px;
+    color: #67b1c6;
+    cursor: pointer;
+    top: 21rem;
+  }
+  .btn-prev {
+    left: 0.05rem;
+  }
+  .btn-next {
+    right: 0.05rem;
+  }
+
+
+
+  .section4 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 70dvw;
+    margin: auto;
+    column-gap: 2dvw;
+    justify-content: center ;
+    align-items: center;
+    height: 50vh; 
+    overflow: hidden;   
+    white-space: pre-wrap;
+    transition-timing-function: ease;
+    transition-duration: 0.65s;
+    transition-delay: 0.444444s;
+    animation-duration: 0.65s;
+    padding-top: 80px;
+  }
+
+  .section4GroupButtons {
+    display: flex;
+    column-gap: 30px;
+  }
+  
+
+
+
+  
+  .footer {
+    text-align: center;
+    width:100%;
+    font-weight: 400;
+    font-size: 0.8rem;
+
+    
+  }
